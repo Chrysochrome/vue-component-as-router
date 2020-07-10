@@ -1,0 +1,32 @@
+{
+  "name": "app-template",
+  "title": "测试App",
+  "author": "admin",
+  "keywords": "test",
+  "company": "久其软件",
+  "type": false,
+  "version": "v0.1",
+  "license": "",
+  "description": "",
+  "icon":"icon-_ZSYshujuluru",
+  "data": {
+    "static": [
+      {"name": "vuex", "url": "static/lib/vuex.min.js"}
+    ],
+    "app": {
+      "component": ["dist/app.bundle.js"]
+    },
+    "config": [
+      {
+        "title":"模版",
+        "key":"code",
+        "type": "array",
+        "dataSource": {
+          "api":"/api/define",
+          "titleColumn":"title",
+          "valueColumn": "code"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@nvwa/app-template",
+  "version": "0.0.8",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build ./src/main.build.js",
+    "build:single": "vue-cli-service build --target lib",
+    "lint": "vue-cli-service lint"
+  },
+  "files": [
+    "dist",
+    "app.config.json"
+  ],
+  "dependencies": {
+    "core-js": "^3.4.1",
+    "iview": "^3.4.2",
+    "iviewex": "^2.6.26",
+    "nr.os.js": "^1.5.7",
+    "vue": "^2.6.10",
+    "vuex": "^3.1.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.5",
+    "@vue/cli-plugin-eslint": "^4.0.5",
+    "@vue/cli-service": "^4.0.5",
+    "@vue/eslint-config-standard": "4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

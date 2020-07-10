@@ -1,0 +1,41 @@
+stages:
+  - install_deps
+  - lint
+  - build
+
+cache:
+  paths:
+    - node_modules/
+    - dist/
+
+# 安装依赖
+install_deps:
+  stage: install_deps
+  only:
+    - master
+  script:
+    - npm install --registry http://10.2.38.78:4873/
+  tags:
+    - np-runner
+
+# 统一代码格式
+lint:
+  stage: lint
+  script:
+    - npm run lint
+  tags:
+    - np-runner
+
+    # 编译
+build:
+  stage: build
+  only:
+    - master
+  script:
+    - npm run build
+  artifacts:
+    paths:
+    - dist
+    expire_in: 1 day
+  tags:
+    - np-runner
